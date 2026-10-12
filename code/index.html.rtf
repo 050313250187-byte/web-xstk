@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 AppleColorEmoji;
+\f3\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh17480\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \uc0\u432 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+\pard\pardeftab720\partightenfactor0
+\cf2 <html lang="vi">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>H\uc0\u7885 c \u272 \u7883 nh L\'fd & Gi\u7843 i To\'e1n X\'e1c Su\u7845 t Th\u7889 ng K\'ea Pro</title>\
+    <!-- Tailwind CSS -->\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <!-- MathJax hi\uc0\u7875 n th\u7883  c\'f4ng th\u7913 c LaTeX -->\
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>\
+</head>\
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans">\
+    \
+    <!-- Header -->\
+    <header class="bg-indigo-700 text-white p-4 shadow-md flex justify-between items-center">\
+        <h1 class="text-lg font-bold flex items-center gap-2">\
+            
+\f2 \uc0\u55357 \u56522 
+\f1  Gia S\uc0\u432  AI - Quy Tr\'ecnh H\u7885 c \u272 \u7883 nh L\'fd XSTK\
+        </h1>\
+        <button id="openSettings" class="bg-indigo-800 hover:bg-indigo-900 px-3 py-1.5 rounded-lg text-sm transition">\
+            
+\f2 \uc0\u9881 \u65039 
+\f1  C\'e0i \uc0\u273 \u7863 t API Key\
+        </button>\
+    </header>\
+\
+    <!-- Main Chat Container -->\
+    <main class="flex-1 max-w-4xl w-full mx-auto p-4 flex flex-col gap-4">\
+        <!-- Khung hi\uc0\u7875 n th\u7883  chat -->\
+        <div id="chatBox" class="bg-white rounded-xl shadow border border-slate-200 p-4 flex-1 min-h-[450px] max-h-[600px] overflow-y-auto space-y-4">\
+            <div class="bg-indigo-50 border border-indigo-100 p-3.5 rounded-lg text-indigo-900 text-sm leading-relaxed">\
+                
+\f2 \uc0\u55357 \u56395 
+\f1  <strong>Xin ch\'e0o!</strong> T\'f4i l\'e0 Gia S\uc0\u432  AI X\'e1c Su\u7845 t Th\u7889 ng K\'ea. Khi h\u7885 c b\u7845 t k\u7923  \u273 \u7883 nh l\'fd n\'e0o (nh\u432  Bayes, Bernoulli, Ph\'e2n ph\u7889 i chu\u7849 n...), t\'f4i s\u7869  h\u432 \u7899 ng d\u7851 n b\u7841 n tr\u7843 i qua <strong>4 b\u432 \u7899 c s\u432  ph\u7841 m chu\u7849 n</strong>:\
+                <br><br>\
+                
+\f2 \uc0\u55357 \u56524 
+\f1  <strong>B\uc0\u432 \u7899 c 1: Tr\u7843 i nghi\u7879 m</strong> (T\'ecnh hu\u7889 ng th\u7921 c t\u7871  & \u272 \u7897 ng l\u7921 c)\
+                <br>
+\f2 \uc0\u55357 \u56524 
+\f1  <strong>B\uc0\u432 \u7899 c 2: H\'ecnh th\'e0nh \u273 \u7883 nh l\'fd</strong> (Gi\u7843  thi\u7871 t, K\u7871 t lu\u7853 n & Ch\u7913 ng minh)\
+                <br>
+\f2 \uc0\u55357 \u56524 
+\f1  <strong>B\uc0\u432 \u7899 c 3: C\u7911 ng c\u7889 </strong> (V\'ed d\u7909  \u273 \u417 n gi\u7843 n \u273 \u7863 c tr\u432 ng)\
+                <br>
+\f2 \uc0\u55357 \u56524 
+\f1  <strong>B\uc0\u432 \u7899 c 4: V\u7853 n d\u7909 ng</strong> (Gi\u7843 i quy\u7871 t b\'e0i to\'e1n to\'e1n h\u7885 c & th\u7921 c ti\u7877 n)\
+            </div>\
+        </div>\
+\
+        <!-- Khung nh\uc0\u7853 p \u273 \u7873  b\'e0i / y\'eau c\u7847 u -->\
+        <div class="bg-white rounded-xl shadow border border-slate-200 p-3 flex flex-col gap-2">\
+            <textarea id="userInput" rows="3" placeholder="Nh\uc0\u7853 p t\'ean \u273 \u7883 nh l\'fd c\u7847 n h\u7885 c (vd: C\'f4ng th\u7913 c Bayes) ho\u7863 c b\'e0i t\u7853 p XSTK..." class="w-full p-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"></textarea>\
+            \
+            <div class="flex justify-between items-center">\
+                <button id="voiceBtn" class="px-3 py-1.5 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-lg text-sm border flex items-center gap-1 transition">\
+                    
+\f2 \uc0\u55356 \u57252 
+\f1  N\'f3i (Voice)\
+                </button>\
+                <button id="sendBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg font-medium text-sm transition flex items-center gap-1 shadow">\
+                    
+\f2 \uc0\u55357 \u56960 
+\f1  G\uc0\u7917 i c\'e2u h\u7887 i\
+                </button>\
+            </div>\
+        </div>\
+    </main>\
+\
+    <!-- Modal C\'e0i \uc0\u273 \u7863 t API Key -->\
+    <div id="settingsModal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">\
+        <div class="bg-white rounded-xl max-w-md w-full p-6 space-y-4 shadow-xl">\
+            <h2 class="text-lg font-bold text-slate-800">C\'e0i \uc0\u273 \u7863 t Google Gemini API Key</h2>\
+            <p class="text-xs text-slate-500">L\uc0\u7845 y API Key mi\u7877 n ph\'ed t\u7841 i <a href="https://aistudio.google.com/" target="_blank" class="text-indigo-600 underline">Google AI Studio</a>.</p>\
+            <input type="password" id="apiKeyInput" placeholder="D\'e1n m\'e3 API Key v\'e0o \uc0\u273 \'e2y..." class="w-full p-2 border rounded-lg text-sm focus:ring-2 focus:ring-indigo-500">\
+            <div class="flex justify-end gap-2">\
+                <button id="closeSettings" class="px-4 py-2 border rounded-lg text-sm hover:bg-slate-100">H\uc0\u7911 y</button>\
+                <button id="saveApiKey" class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700">L\uc0\u432 u l\u7841 i</button>\
+            </div>\
+        </div>\
+    </div>\
+\
+    <script src="script.js"></script>\
+</body>\
+</html>\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 \
+}
